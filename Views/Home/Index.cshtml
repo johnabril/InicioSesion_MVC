@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+@if (ViewBag.Mensaje != null)
+{
+    <h1>@ViewBag.Mensaje</h1>
+}
+else
+{
+    <h1>Inicio de Sesion</h1>
+}
+<p class="subtitle">
+
+    Inicia y disfruta de una experiencia de compra personalizada.
+</p>
+
+<form id="registerForm" method="post" action="@Url.Action("Index","Home")">
+    <div class="field">
+        <label for="correo">Correo electrónico</label>
+        <input id="correo" name="correo" type="email"
+               placeholder="ejemplo@correo.com"
+               autocomplete="email" required>
+    </div>
+
+
+
+    <div class="field">
+        <label for="contraseña">Contraseña</label>
+        <input id="contraseña" name="contraseña"
+               type="password" placeholder="Contraseña"
+               autocomplete="off" required>
+    </div>
+
+
+
+    <button class="primary-button" type="submit">
+        CONFIRMAR
+    </button>
+</form>
+
+
+<div class="separator">
+    <span>También puedes acceder con:</span>
+</div>
+
+<button class="social-button" type="button">
+    <span class="google-icon">G</span>
+    Continuar con Google
+</button>
+
+<button class="social-button" type="button">
+    <span class="facebook-icon">f</span>
+    Continuar con Facebook
+</button>
+
+
+
